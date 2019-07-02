@@ -134,7 +134,7 @@ def render(
         branch = None
     temp_dir = tempfile.mkdtemp('', 'readme2tex-')
 
-    with open(readme) as readme_file:
+    with open(readme, encoding="utf-8") as readme_file:
         content = readme_file.read()
     content = content.replace('\r', '')
 
@@ -338,7 +338,7 @@ def render(
             height)
         if block: img = '<p align="center">%s</p>' % img
         new = new[:start] + img + new[end:]
-    with open(output, 'w') as outfile:
+    with open(output, 'w', encoding="utf-8") as outfile:
         outfile.write(new)
 
     if htmlize:
@@ -347,5 +347,5 @@ def render(
         except:
             logging.error("Cannot render markdown, make sure that the markdown package is installed.")
             return
-        with open(output+".html", 'w') as outfile:
+        with open(output+".html", 'w', encoding="utf-8") as outfile:
             outfile.write(markdown.markdown(new))

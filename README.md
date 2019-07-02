@@ -22,6 +22,12 @@ are properly aligned with the rest of the text to give a more natural look to th
 this formula <img alt="$\frac{dy}{dx}$" src="svgs/24a7d013bfb0af0838f476055fc6e1ef.png?invert_in_darkmode" align=middle width="14.297415pt" height="30.58869pt"/> is preprocessed so that it lines up at the correct baseline for the text.
 This is the one salient feature of this package compared to the others out there.
 
+### Additional Installation Instructions
+
+The package does not support `--pngtrick` feature if it's installed via `pip` under `conda envs` on Windows. If you need this support, please install the bleeding edge as instructed below. Besides, please including the project folder into system environment `Path` for better experience.  
+
+**Note**: The bleeding edge only supports `Python 3.x`.  
+
 ### Installation
 
 Make sure that you have Python 2.7 or above and `pip` installed. In addition, you'll need to have the programs `latex` 
